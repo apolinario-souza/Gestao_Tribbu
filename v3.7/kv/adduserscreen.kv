@@ -1,0 +1,40 @@
+<AdduserScreen>:
+    
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("643e64")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        TextInput:
+            id: add_user_input
+            hint_text: "Usuário"
+            size_hint: .6, .06
+            pos_hint: {"top": .8, "right": .7}
+            on_text:
+                self.focus = not self.focus if "\n" in self.text else self.focus
+        TextInput:
+            id: add_id_input
+            hint_text: "Senha"
+            size_hint: .6, .06
+            pos_hint: {"top": .7, "right": .7}
+            on_text:
+                self.focus = not self.focus if "\n" in self.text else self.focus
+     
+
+        ImageButton:
+            source: "icones/adicionar.png"
+            size_hint: .2, .1
+            pos_hint: {"top": .8, "right": .9}
+            on_release:app.add_user()
+	
+	ImageButton:
+		source: "icones/voltar.png"
+		size_hint: .2, .1
+		pos_hint: {"top": .2, "right": .9}
+		on_release: app.change_screen('home_screen')
+                
+       
+
+

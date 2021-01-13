@@ -1,0 +1,60 @@
+#:include kv/homescreen.kv
+#:include kv/costsfixedscreen.kv
+#:include kv/costsvariablescreen.kv
+#:include kv/incomescreen.kv
+#:include kv/accscreen.kv
+#:include kv/statisticscreen.kv
+#:include kv/loginscreen.kv
+#:include kv/adduserscreen.kv
+#:include kv/addyearscreen.kv
+#:include kv/loginscreen.kv
+
+
+
+
+
+GridLayout:
+	cols: 1
+	ScreenManager:
+		id: screen_manager
+		
+				
+		LoginScreen:
+			name: "login_screen"
+			id: login_screen
+		
+		HomeScreen:
+			name: "home_screen"
+			id: home_screen
+		CostsFixedScreen:
+			name: "costsfixed_screen"
+			id: costsfixed_screen
+		CostsVariableScreen:
+			name: "costsvariable_screen"
+			id: costsvariable_screen
+		IncomeScreen:
+			name: "income_screen"
+			id: income_screen
+		AccScreen:
+			name: "acc_screen"
+			id: acc_screen
+		AdduserScreen:
+			name: "adduser_screen"
+			id: adduser_screen
+	
+		
+		StatisticScreen:
+			name: "statistic_screen"
+			id: statistic_screen
+		
+		
+		
+		
+		
+		AddyearScreen:
+			name: "addyear_screen"
+			id: addyear_screen
+		
+		
+		
+				

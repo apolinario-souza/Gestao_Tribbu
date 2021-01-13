@@ -1,0 +1,402 @@
+
+<StatisticScreen>:
+	
+	FloatLayout:
+		canvas:
+		    Color:
+		        rgb: utils.get_color_from_hex("643e64")
+		    Rectangle:
+		        size: self.size
+		        pos: self.pos
+
+				
+		GridLayout:
+			cols: 14
+			rows:5
+			size_hint: .8, .3
+			
+				
+			pos_hint: {"top": 1, "right": .9}
+				 
+			
+			Label:
+				text: ''
+				font_size:10
+			Label:
+				text: 'Jan'
+				font_size:10
+			Label:
+				text: 'Fev'
+				font_size:10		
+							
+			Label:
+				text: 'Mar'
+				font_size:10
+						
+			Label:
+				text: 'Abr'
+				font_size:10						
+			
+			Label:
+				text: 'Mai'
+				font_size:10		
+					
+			Label:
+				text: 'Jun'
+				font_size:10	
+			
+			Label:
+				text: 'Jul'
+				font_size:10
+			Label:
+				text: 'Ago'
+				font_size:10
+			Label:
+				text: 'Set'
+				font_size:10
+			Label:
+				text: 'Out'
+				font_size:10
+			Label:
+				text: 'Nov'
+				font_size:10			
+			Label:
+				text: 'Dez'
+				font_size:10
+			Label:
+				text: 'Total'
+				font_size:10
+				bold: True
+			
+			Label:
+				text: 'Faturamento'
+				font_size:10			
+			Label:
+				font_size:10		
+				id: faturamento1
+			Label:
+				font_size:10		
+				id: faturamento2
+			Label:
+				font_size:10		
+				id: faturamento3
+			Label:
+				font_size:10		
+				id: faturamento4		
+			Label:
+				font_size:10		
+				id: faturamento5
+			Label:
+				font_size:10		
+				id: faturamento6
+			Label:
+				font_size:10		
+				id: faturamento7
+			Label:
+				font_size:10		
+				id: faturamento8
+			Label:
+				font_size:10		
+				id: faturamento9
+			Label:
+				font_size:10		
+				id: faturamento10
+			Label:
+				font_size:10		
+				id: faturamento11
+			Label:
+				font_size:10		
+				id: faturamento12
+			Label:
+				font_size:10		
+				id: faturamento13
+				bold: True		
+			
+			Label:
+				text: 'Desp. Fixa'
+				font_size:10			
+			Label:
+				font_size:10		
+				id: Desp_Fix1
+			Label:
+				font_size:10		
+				id: Desp_Fix2
+			Label:
+				font_size:10		
+				id: Desp_Fix3
+			Label:
+				font_size:10		
+				id: Desp_Fix4		
+			Label:
+				font_size:10		
+				id: Desp_Fix5
+			Label:
+				font_size:10		
+				id: Desp_Fix6
+			Label:
+				font_size:10		
+				id: Desp_Fix7
+			Label:
+				font_size:10		
+				id: Desp_Fix8
+			Label:
+				font_size:10		
+				id: Desp_Fix9
+			Label:
+				font_size:10		
+				id: Desp_Fix10
+			Label:
+				font_size:10		
+				id: Desp_Fix11
+			Label:
+				font_size:10		
+				id: Desp_Fix12
+			Label:
+				font_size:10		
+				id: Desp_Fix13
+				bold: True	
+			
+			Label:
+				text: 'Desp. Variável'
+				font_size:10			
+			Label:
+				font_size:10		
+				id: Desp_Var1
+			Label:
+				font_size:10		
+				id: Desp_Var2
+			Label:
+				font_size:10		
+				id: Desp_Var3
+			Label:
+				font_size:10		
+				id: Desp_Var4		
+			Label:
+				font_size:10		
+				id: Desp_Var5
+			Label:
+				font_size:10		
+				id: Desp_Var6
+			Label:
+				font_size:10		
+				id: Desp_Var7
+			Label:
+				font_size:10		
+				id: Desp_Var8
+			Label:
+				font_size:10		
+				id: Desp_Var9
+			Label:
+				font_size:10		
+				id: Desp_Var10
+			Label:
+				font_size:10		
+				id: Desp_Var11
+			Label:
+				font_size:10		
+				id: Desp_Var12
+			Label:
+				font_size:10		
+				id: Desp_Var13
+				bold: True	
+			
+			Label:
+				text: 'Balanço'
+				font_size:10			
+			Label:
+				font_size:10		
+				id: balanco1
+			Label:
+				font_size:10		
+				id: balanco2
+			
+			Label:
+				font_size:10		
+				id: balanco3		
+			Label:
+				font_size:10		
+				id: balanco4
+			Label:
+				font_size:10		
+				id: balanco5
+			Label:
+				font_size:10		
+				id: balanco6
+			Label:
+				font_size:10		
+				id: balanco7
+			Label:
+				font_size:10		
+				id: balanco8
+			Label:
+				font_size:10		
+				id: balanco9
+			Label:
+				font_size:10		
+				id: balanco10
+			Label:
+				font_size:10		
+				id: balanco11
+			Label:
+				font_size:10		
+				id: balanco12
+			Label:
+				font_size:10		
+				id: balanco13
+				bold: True
+			
+		BoxLayout:
+			pos_hint: {"top": .5, "right": 0.8}
+			id: box1
+			name: "box1"
+			orientation: 'vertical'
+			size_hint: .7, .5
+					
+				
+			
+			
+		ImageBotton:
+			size_hint: 0.1, 0.1
+			pos_hint: {"top": .5, "right": 1}
+			source:"icones/pesquisar.png"
+			on_release: app.make_graphic ()
+		
+		
+		ImageButton:
+			source: "icones/voltar.png"
+			size_hint: .1, .1
+			pos_hint: {"top": .3, "right": 1}
+			on_release: app.change_screen('home_screen')
+			on_release: app.clear()
+			
+			
+			 
+
+
+#########  Years #######        
+              
+	Button:
+		id: btn_years
+		background_color: "FF335B"
+		font_size: 12
+		size: 40, 25
+		size_hint: None, None
+		pos_hint: {"top": 1, "right": 1}
+		text: ''
+		
+		on_release: dropdown_years.open(self)
+
+	DropDown:
+		id: dropdown_years
+		background_color: "FF335B"
+		font_size: 12
+		size: 40, 25
+		pos_hint: {"top": 1, "right": 1}
+		size_hint: .01, .01	
+		
+		on_select: btn_years.text = '{}'.format(args[1]); root.state = False
+		
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25		
+		    text: '...'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: '2021'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		   		    		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2022'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		
+	
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: '2023'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		   		    		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2024'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2025'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2026'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)	
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2027'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2028'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)	
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2029'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2030'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)			    		    
+
+			
+			

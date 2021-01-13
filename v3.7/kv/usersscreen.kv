@@ -1,0 +1,30 @@
+#:import utils kivy.utils
+
+<UsersScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("643e64")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+	ScrollView:
+		bar_pos_y: 'left'
+		bar_width: 10
+		GridLayout:
+		    cols: 2
+		    size_hint_y: None
+		    height: self.minimum_height
+		    row_default_height: '100dp'
+		    row_force_default: True
+		    spacing: 100, 100
+		    padding: 20, 20
+		    Label:
+		    	text: "Água"
+		    TextInput:
+		    	id: agua
+		    Label:
+		    	text: "Internet"
+		    TextInput:
+		    	id: internet
+		   	

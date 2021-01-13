@@ -1,0 +1,48 @@
+#:import utils kivy.utils
+
+<HomeScreen>:
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("643e64")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+        GridLayout:
+            cols: 5
+            size_hint: 1, .2
+            pos_hint: {"top": .7, "right": 1}
+            ImageBotton:
+            	source:"icones/custos_fixos.png"
+            	on_release: app.change_screen('costsfixed_screen')            
+            ImageBotton:
+            	source:"icones/custos_variavel.png"
+            	on_release: app.change_screen('costsvariable_screen')
+            ImageBotton:
+            	source:"icones/faturamento.png"
+            	on_release: app.change_screen('income_screen')
+            ImageBotton:
+            	source:"icones/acompanhamento.png"
+            	on_release: app.change_screen('acc_screen')
+            ImageBotton:
+            	source:"icones/estatisticas.png"
+            	on_release: app.change_screen('statistic_screen')
+            
+            	
+	       
+	ImageBotton:
+		source:"icones/adicionar.png"
+		size_hint: .1, .1
+		pos_hint: {"top": .2, "right": 1} 
+		on_release: app.change_screen('adduser_screen')  	
+            	
+	
+		
+	Image:
+		source: "icones/logo.png"
+		size_hint: .15, .15
+		pos_hint: {"top": 1, "right": 1} 
+				     
+			
+	
+            	

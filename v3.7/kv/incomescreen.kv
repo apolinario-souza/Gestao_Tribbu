@@ -1,0 +1,386 @@
+
+<IncomeScreen>:
+    canvas:
+        Color:
+            rgb: utils.get_color_from_hex("643e64")
+        Rectangle:
+            size: self.size
+            pos: self.pos
+    FloatLayout:
+        canvas:
+            Color:
+                rgb: utils.get_color_from_hex("643e64")
+            Rectangle:
+                size: self.size
+                pos: self.pos
+
+
+	
+#########  Items #######
+		GridLayout:
+			cols: 5
+			rows: 3
+			pos_hint: {"top": .7, "right": .5}
+			size_hint: .3, .20
+						
+			padding: -150, 10
+			 
+			                 
+			Label:
+				text: ""
+			
+			Label:
+				text: "1º"		
+											
+			Label:
+				text: "2º"
+			Label:
+				text: "3º"
+			Label:
+				text: "4º"
+			Label:
+				text: "Quant. Delivery"
+			
+			
+			TextInput:
+				id: add_quantdelivery1_input
+				halign: 'center'
+			
+			TextInput:
+				id: add_quantdelivery2_input
+				halign: 'center'					
+			
+			TextInput:
+				id: add_quantdelivery3_input
+				halign: 'center'
+						
+			TextInput:
+				id: add_quantdelivery4_input
+				halign: 'center'
+			
+			Label:
+				text: "Faturamento"			
+			
+			TextInput:
+				id: add_faturamento1_input
+				halign: 'center'
+										
+			TextInput:
+				id: add_faturamento2_input
+				halign: 'center'
+				
+			
+			TextInput:
+				id: add_faturamento3_input
+				halign: 'center'
+			TextInput:
+				id: add_faturamento4_input
+				halign: 'center'
+						
+							
+		        	   
+			        
+            
+	ImageButton:
+		source: "icones/adicionar.png"
+		size_hint: .2, .1
+		pos_hint: {"top": .6, "right": .9}
+		
+		on_release: app.add_items_income ("add_quantdelivery1_input", "add_quantdelivery2_input", "add_quantdelivery3_input", "add_quantdelivery4_input",  "add_faturamento1_input", "add_faturamento2_input", "add_faturamento3_input", "add_faturamento4_input")
+	
+	
+	ImageButton:
+		source: "icones/pesquisar.png"
+		size_hint: .2, .1
+		pos_hint: {"top": .4, "right": .9}
+		on_release: app.get_items_income ("add_quantdelivery1_input", "add_quantdelivery2_input", "add_quantdelivery3_input", "add_quantdelivery4_input",  "add_faturamento1_input", "add_faturamento2_input", "add_faturamento3_input", "add_faturamento4_input")
+	
+	
+	ImageButton:
+		source: "icones/voltar.png"
+		size_hint: .2, .1
+		pos_hint: {"top": .2, "right": .9}
+		on_release: app.change_screen('home_screen')
+       
+
+
+#########  Months #######        
+              
+	Button:
+		id: btn_months
+		background_color: "FF335B"
+		font_size: 12
+		size: 40, 25
+		pos_hint: {"top": 1, "right": .7}
+		size_hint: None, None
+		text: ''
+		
+		on_release: dropdown_months.open(self)
+		
+				
+		
+	
+
+	
+	DropDown:
+		id: dropdown_months
+		pos_hint: {"top": 1, "right": .7}
+		size_hint: .01, .01	
+		
+		on_select: btn_months.text = '{}'.format(args[1]); root.state = False
+		
+		
+		Button:
+		    
+		    text: '...'
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Jan'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		   		    		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Fev'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Mar'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Abr'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Mai'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Jun'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Jul'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Ago'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Set'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Out'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Nov'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: 'Dez'
+		    size_hint: None, None
+		    on_release: btn_months.text = self.text
+		    on_release: dropdown_months.select(self.text)
+		    		    		    
+
+#########  Years #######        
+              
+	Button:
+		id: btn_years
+		background_color: "FF335B"
+		font_size: 12
+		size: 40, 25
+		size_hint: None, None
+		pos_hint: {"top": 1, "right": .6}
+		text: ''
+		
+		on_release: dropdown_years.open(self)
+		
+				
+		
+	
+	
+
+	
+	DropDown:
+		id: dropdown_years
+		background_color: "FF335B"
+		font_size: 12
+		size: 40, 25
+		pos_hint: {"top": 1, "right": .6}
+		size_hint: .01, .01	
+		
+		on_select: btn_years.text = '{}'.format(args[1]); root.state = False
+		
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25		
+		    text: '...'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: '2021'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		   		    		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2022'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		
+	
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25	
+		    text: '2023'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		   		    		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2024'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2025'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2026'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)	
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2027'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2028'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)	
+		
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2029'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)
+		    
+		Button:
+		    background_color: "FF335B"
+		    font_size: 12
+		    size: 40, 25
+		    text: '2030'
+		    size_hint: None, None
+		    on_release: btn_years.text = self.text
+		    on_release: dropdown_years.select(self.text)			    		    
+
+
+		
+
+
+
